@@ -1,12 +1,63 @@
-﻿
-    @model List<Student>
-    @{
-        foreach(var item in Model)//لازم احط Model
-        {
-            <h1>@item.Id</h1>
-           <h1>@item.name</h1> 
-        }
-    }
+﻿@model List<Student>
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">Students</h2>
+
+    <table class="table table-striped table-hover">
+
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var student in Model)
+            {
+                <tr>
+
+                    <td>@student.Id</td>
+
+                    <td>@student.name</td>
+
+                    <td>@student.email</td>
+
+                    <td>
+
+                        <a href="/Student/Details/@student.Id"
+                           class="btn btn-primary btn-sm">
+
+                            <i class="bi bi-pencil">Show Details</i>
+
+                        </a>
+                        <a href="/Student/Edit/@student.Id"  class="btn btn-warning btn-sm">
+                            <i class="bi bi-trash">Edit</i>
+                        </a>
+                        <a href="/Student/Delete/@student.Id"
+                           class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash">Delete</i>
+                        </a>
+
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+    <a  href="/Student/Create"class="btn btn-success">
+        <i class="bi bi-plus-circle"></i>
+        Add Student
+    </a>
+
+</div>
 
 
 

@@ -1,0 +1,60 @@
+﻿@model Student
+
+<h1>Create</h1>
+
+<h4>Student</h4>
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">Create Student</h3>
+                </div>
+
+                <div class="card-body">
+
+                    <form method="post" >
+
+                        <div class="mb-3">
+                            <label class="form-label">Id</label>
+                            <input type="number"
+                                  asp-for="Id"
+                                   class="form-control"
+                                   placeholder=" Id" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text"
+                                 asp-for="name"
+                                   class="form-control"
+                                   placeholder="Name" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="text"
+                                 asp-for="email"
+                                   class="form-control"
+                                   placeholder="Email" />
+                        </div>
+
+                        <button type="submit" class="btn btn-success">
+                            Add Student
+                        </button>
+
+                        <a href="/Student/Index" class="btn btn-secondary">
+                            Back
+                        </a>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

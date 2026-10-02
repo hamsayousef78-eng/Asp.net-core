@@ -1,0 +1,24 @@
+﻿@model Student
+
+
+<h1>Details</h1>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Id</dt>
+        <dd class="col-sm-10">@Model.Id</dd>
+
+        <dt class="col-sm-2">Name</dt>
+        <dd class="col-sm-10">@Model.name</dd>
+
+        <dt class="col-sm-2">Price</dt>
+        <dd class="col-sm-10">@Model.email</dd>
+    </dl>
+</div>
+
+<div>
+    <!--<a href="" class="btn btn-primary">Edit</a>-->
+    <a href="/Student/Index" class="btn btn-secondary">Back to List</a>
+</div>
